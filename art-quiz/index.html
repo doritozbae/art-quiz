@@ -97,16 +97,16 @@
          </h5>
          <h5>2021</h5>
       </div>
-   </section> -->
+   </section>
 
-   <section class="categories-page active-page" id="categories-page">
+   <section class="categories-page" id="categories-page">
       <div class="categories-page-container">
          <div class="categories-page-container-settings settings-btn">
             <div class="categories-page-container-logo"></div>
             <div class="categories-page-container-menu">
-               <h3>Home</h3>
-               <h3>Categories</h3>
-               <h3>Score</h3>
+               <h3 class="categories-page-container-menu-home">Home</h3>
+               <h3 class="categories-page-container-menu-categories">Categories</h3>
+               <h3 class="categories-page-container-menu-score">Score</h3>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
@@ -354,9 +354,74 @@
          </h5>
          <h5>2021</h5>
       </div>
-   </section>
+   </section> -->
   
-   
-   <script src="app.js"></script>
+   <section class="quiz-page active-page" id="quiz-page">
+      <div class="quiz-page-container">
+         <div class="quiz-page-container-timer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+               <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+               <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+             </svg>
+             <div class="quiz-page-timer">
+               <input type="range" value="40" min="0" max="100" step="1" class="timer" id="timer">
+             </div>
+             <h2 class="timing-font">0:20</h2>
+         </div>
+         <div class="quiz-page-container-question">
+            <h2>jjjkkhjhjhj</h2>
+         </div>
+         <div class="quiz-page-container-picture"></div>
+         <div class="quiz-page-container-buttons">
+            <button class="quiz-button guiz-button-1"></button>
+            <button class="quiz-button guiz-button-2"></button>
+            <button class="quiz-button guiz-button-3"></button>
+            <button class="quiz-button guiz-button-4"></button>
+         </div>
+      </div>
+
+      <!-- <div class="quiz-slider">
+         <div class="quiz-slide active-quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+         <div class="quiz-slide"></div>
+      </div> -->
+
+      <div class="main-page-footer">
+         <div>
+            <a href="https://rs.school/js/">
+               <img src="./assets/svg/rslogo.svg" width="100" height="50" alt="rslogo">
+            </a>
+         </div>
+         <h5>
+            <a href="https://github.com/doritozbae">
+               doritozbae
+           </a>
+         </h5>
+         <h5>2021</h5>
+      </div>
+
+      <!-- <div class="quit-alert">
+      </div>
+      <div class="right-answer-alert"></div>
+      <div class="wrong-answer-alert"></div>
+      <div class="congrats-alert"></div>
+      <div class="complete-alert"></div>
+      <div class="gameover-alert"></div> -->
+
+   </section>
+
+   <!-- <section class="alert-section active-page"> -->
+      
+   </section>
+
+   <script src="/sript/app.js"></script>
 </body>
 </html>
