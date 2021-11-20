@@ -1,23 +1,11 @@
-const mainPage = document.getElementById('main-page');
-const settingsPage = document.getElementById('settings-page');
-const categoriesPage = document.getElementById('categories-page');
+import {settingsBtn, mainPage, categoryCard, categoriesPage, picturesQuizClose, categorySettingsBtn, settingsPage, 
+       closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn, homeBtn, scoreBtn,
+       artistBtn, menuItemHome, timeSwitch, pictureQuiz, quitAlert} from "./values.js";
+import * as settings from './settings.js';
+import * as categories from './categories.js';
 
-const settingsBtn = document.querySelector('.settings-btn');
-const closeSettingsBtn = document.querySelector('.close-btn');
 
-const timeSwitch = document.querySelector('.setting-time-switch');
-const soundButton = document.querySelector('.sound-button');
-const muteButton = document.querySelector('.mute-button');
-const soundControl = document.querySelector('.progress');
-
-const artistBtn = document.querySelector('.artist-quiz');
-const picturesBtn = document.querySelector('.pictures-quiz');
-
-const menuItemCategories = document.querySelector('.categories-page-container-menu-categories');
-const menuItemHome = document.querySelector('.categories-page-container-menu-home');
-const menuItemScore = document.querySelector('.categories-page-container-menu-score');
-
-// -SETTINGS------------------------------
+// main page
 settingsBtn.addEventListener('click', () => {
    mainPage.classList.remove("active-page");
    settingsPage.classList.add("active-page");
@@ -26,92 +14,58 @@ closeSettingsBtn.addEventListener('click', () => {
    mainPage.classList.add("active-page");
    settingsPage.classList.remove("active-page");
 })
-artistBtn.addEventListener('click', () => {
+picturesBtn.addEventListener('click', () => {
    mainPage.classList.remove("active-page");
    categoriesPage.classList.add("active-page");
    menuItemCategories.classList.toggle("pink-font");
 })
-
-// switch time
-timeSwitch.addEventListener('click', () => {
-   timeSwitch.classList.toggle("switch-on");
-   
-})
-
-
-//volume functions
-const playlist = [
-   {      
-     title: 'Aqua Caelestis',
-     src: './assets/sounds/1.mp3',
-     duration: '00:39'
-   },  
-   {
-   title: 'River Flows In You',
-   src: './assets/sounds/3.mp3',
-   duration: '01:37'
-   },
-   {
-   title: 'Summer Wind',
-   src: './assets/sounds/4.mp3',
-   duration: '01:50'
-   }
- ]
-const audio = new Audio();
-let isPlay = false;
-let currentAudio = 1;
-audio.src = playlist[currentAudio].src;
-
-function playAudio() {
-   if(!isPlay) {
-       audio.play();
-       isPlay = true;
-   } 
-   else {
-       audio.pause();
-       isPlay = false;
-   }
-}
-soundButton.addEventListener('click', playAudio);
-
-function changeVolumeButtons() {
-   audio.volume = soundControl.value / 100;
-   
-   if (audio.volume === 0) {
-      soundButton.style.color = '#A4A4A4';
-      muteButton.style.color = 'white';
-   }
-   else {
-      soundButton.style.color = 'white';
-      muteButton.style.color = '#A4A4A4';
-   }
-}
-soundControl.addEventListener('change', changeVolumeButtons);
-
-function muteButtonFunc() {
-   muteButton.classList.toggle('mute');
-   if (muteButton.classList.contains('mute')) {
-       audio.volume = 0;
-       soundControl.value = 0;
-       soundButton.style.color = '#A4A4A4';
-       muteButton.style.color = 'white';
-       soundControl.style.background = `linear-gradient(to right, lightpink 0%, lightpink 0%, #C4C4C4 0%, #C4C4C4)`;
-   }
-   else {
-       audio.volume = 0.4;
-       soundControl.value = 40;
-       soundButton.style.color = 'white';
-       muteButton.style.color = '#A4A4A4';
-       soundControl.style.background = `linear-gradient(to right, lightpink 0%, lightpink 40%, #C4C4C4 40%, #C4C4C4)`;
-   }
-}
-muteButton.addEventListener('click', muteButtonFunc);
-
-
-// -----CATEGORIES-Page-----------------------------------------
-
 menuItemHome.addEventListener('click', () => {
    categoriesPage.classList.remove("active-page");
    mainPage.classList.add("active-page");
    menuItemCategories.classList.toggle("pink-font");
 })
+
+
+// settings page
+soundButton.addEventListener('click', settings.playAudio);
+soundControl.addEventListener('change', settings.changeVolumeButtons);
+muteButton.addEventListener('click', settings.muteButtonFunc);
+
+timeSwitch.addEventListener('click', () => {
+   timeSwitch.classList.toggle("switch-on"); 
+})
+
+// categories page
+categorySettingsBtn.addEventListener('click', () => {
+   categoriesPage.classList.remove("active-page");
+   settingsPage.classList.add("active-page");
+})
+homeBtn.addEventListener('click', () => {
+   categoriesPage.classList.remove("active-page");
+   mainPage.classList.add("active-page");
+})
+categoryCard.forEach(function (categoryCards) {
+   categoryCards.addEventListener("click", () => {
+     categories.openPictureQuiz();
+   })
+})
+picturesQuizClose.addEventListener('click', () => {
+   // pictureQuiz.classList.remove("active-page");
+   quitAlert.style.opacity="1";
+})
+
+categories.quitCategoriesAlert();
+
+
+// scoreBtn.addEventListener('click', () => {
+//    categoriesPage.classList.remove("active-page");
+//    settingsPage.classList.add("active-page");
+// })
+
+
+
+// picture quiz page
+// picturesQuizClose.addEventListener('click', () => {
+//    mainPage.classList.add("active-page");
+//    settingsPage.classList.remove("active-page");
+// })
