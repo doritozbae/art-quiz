@@ -1,9 +1,9 @@
 import {settingsBtn, mainPage, categoryCard, categoriesPage, picturesQuizClose, categorySettingsBtn, settingsPage, 
        closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn, homeBtn, scoreBtn,
-       artistBtn, menuItemHome, timeSwitch, pictureQuiz, quitAlert} from "./values.js";
+       artistBtn, greenBg, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton} from "./values.js";
 import * as settings from './settings.js';
 import * as categories from './categories.js';
-
+import * as pictureQuizMod from './picturequiz.js';
 
 // main page
 settingsBtn.addEventListener('click', () => {
@@ -47,12 +47,27 @@ homeBtn.addEventListener('click', () => {
 categoryCard.forEach(function (categoryCards) {
    categoryCards.addEventListener("click", () => {
      categories.openPictureQuiz();
+     pictureQuizMod.showQuestion();
    })
 })
 picturesQuizClose.addEventListener('click', () => {
    // pictureQuiz.classList.remove("active-page");
-   quitAlert.style.opacity="1";
+   // quitAlert.style.display="block";
 })
+
+correctAlertNext.addEventListener('click', () => {
+   // pictureQuiz.classList.remove("active-page");
+   pictureQuizMod.showQuestion();
+   correctAlert.style.display="none";
+   greenBg.style.display="none"; 
+})
+wrongAlertNext.addEventListener('click', () => {
+   pictureQuizMod.showQuestion();
+   wrongAlert.style.display="none";
+   redBg.style.display="none";
+})
+
+
 
 categories.quitCategoriesAlert();
 
