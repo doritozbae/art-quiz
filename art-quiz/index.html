@@ -370,9 +370,11 @@
              <h2 class="timing-font">0:20</h2>
          </div>
          <div class="quiz-page-container-question">
-            <h2>jjjkkhjhjhj</h2>
+            <h2 class="picture-quiz-question">jjjkkhjhjhj</h2>
          </div>
-         <div class="quiz-page-container-picture"></div>
+         <div class="quiz-page-container-picture">
+            <img class="picture-quiz-image"/>
+         </div>
          <div class="quiz-page-container-buttons">
             <button class="quiz-button quiz-button-1"></button>
             <button class="quiz-button quiz-button-2"></button>
@@ -410,7 +412,7 @@
       </div>
 
 
-      <div class="quit-alert"> 
+      <!-- <div class="quit-alert"> 
          <div class="quit-alert-text">
            <h2 class="black-font"> Do you really want to quit the game?</h2> 
          </div>
@@ -419,15 +421,38 @@
             <button class="quit-btn pink-button"> Yes</button>
          </div>
          <div class="close-alert">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <svg class="quit-alert-close-btn"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
              </svg>
          </div>
-      </div>
-<!-- 
-      <div class="right-answer-alert"></div>
-      <div class="wrong-answer-alert"></div>
+      </div> -->
+
+      <div class="correct-answer-layout"></div>
+      <div class="incorrect-answer-layout"></div>
+
+         <div class="right-answer-alert"> 
+            <div class="correct-picture">
+               <img class="correct-picture-img"/>
+            </div>
+            <p class="correct-picture-name">rrrrr</p>
+            <p class="correct-author">rrrrr</p>
+            <button class="correct-alert-btn pink-button">Next</button>
+        </div> 
+
+        
+        <div class="wrong-answer-alert"> 
+         <div class="wrong-picture">
+            <img class="wrong-picture-img"/>
+         </div>
+         <p class="wrong-picture-name">rrrrr</p>
+         <p class="wrong-author">rrrrr</p>
+         <button class="wrong-alert-btn pink-button">Next</button>
+     </div> 
+
+
+      <!-- </div> -->
+      <!-- <div class="wrong-answer-alert"></div>
       <div class="congrats-alert"></div>
       <div class="complete-alert"></div> 
 
