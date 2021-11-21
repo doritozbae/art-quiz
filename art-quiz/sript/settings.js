@@ -1,4 +1,4 @@
-import {soundButton, soundControl,muteButton} from "./values.js";
+import {soundButton, saveBtn, soundControl,muteButton} from "./values.js";
 
 //volume functions
 export const playlist = [
@@ -46,6 +46,7 @@ export function changeVolumeButtons() {
       soundButton.style.color = 'white';
       muteButton.style.color = '#A4A4A4';
    }
+
 }
 // soundControl.addEventListener('change', changeVolumeButtons);
 
@@ -68,3 +69,14 @@ export function muteButtonFunc() {
 }
 // muteButton.addEventListener('click', muteButtonFunc);
 
+// function setLocalStorage() {
+//    localStorage.setItem('volume', audio.volume);
+// }
+// saveBtn.addEventListener('click', setLocalStorage);
+
+// function getLocalStorage() {
+//     if(localStorage.getItem('volume')) {
+//      audio.volume = localStorage.getItem('volume');
+//    }
+//  }
+//  window.addEventListener('load', getLocalStorage)
