@@ -1,4 +1,5 @@
-import {categoryCard, categoriesPage, cancelQuitBtn, quitBtn, quitAlert, pictureQuiz} from "./values.js";
+import {categoryCard, portrait, quitAlertCloseBtn, categoriesPage, cancelQuitBtn, quitBtn, quitAlert, pictureQuiz} from "./values.js";
+import * as pictureQuizMod from "./picturequiz.js";
 
 export function openPictureQuiz() {
    categoriesPage.classList.remove("active-page");
@@ -14,4 +15,8 @@ export function quitCategoriesAlert() {
       categoriesPage.classList.add("active-page");
       quitAlert.style.opacity="0";
    })
+   quitAlertCloseBtn.addEventListener('click', () => {
+      quitAlert.style.opacity="0";
+   })
 }
+
