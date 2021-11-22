@@ -359,7 +359,7 @@
 
    <section class="results-page help">
       <div class="categories-page-container">
-         <div class="categories-page-container-settings settings-btn">
+         <div class="categories-page-container-settings results-settings settings-btn">
             <div class="categories-page-container-logo"></div>
             <div class="categories-page-container-menu">
                <h3 class="categories-page-container-menu-home results-home">Home</h3>
@@ -412,10 +412,12 @@
 
       <div class="quiz-page-container">
          <div class="quiz-page-container-timer">
+            <div class="quiz-close-btn">
             <svg class="close-btn-pic" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
              </svg>
+            </div>
              <div class="quiz-page-timer">
                <input type="range" value="40" min="0" max="100" step="1" class="timer" id="timer">
              </div>
@@ -464,7 +466,7 @@
       </div>
 
 
-      <!-- <div class="quit-alert"> 
+      <div class="quit-alert qa"> 
          <div class="quit-alert-text">
            <h2 class="black-font"> Do you really want to quit the game?</h2> 
          </div>
@@ -478,7 +480,7 @@
                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
              </svg>
          </div>
-      </div>  -->
+      </div> 
 
       <div class="correct-answer-layout"></div>
       <div class="incorrect-answer-layout"></div>
@@ -492,9 +494,7 @@
             <p class="correct-author">rrrrr</p>
             <button class="correct-alert-btn pink-button">Next</button>
       </div> 
-
-        
-        <div class="wrong-answer-alert"> 
+      <div class="wrong-answer-alert"> 
          <div class="wrong-picture">
             <img class="wrong-picture-img"/>
          </div>
@@ -502,15 +502,7 @@
          <p class="wrong-author">rrrrr</p>
          <button class="wrong-alert-btn pink-button">Next</button>
      </div> 
-
-
-      <!-- </div> -->
       <div class="congrats-alert"></div>
-
-      <!-- <div class="complete-alert"> -->
-
-      </div> 
-
       <div class="gameover-alert">
          <img class="gameover-alert-img" src="./assets/img/alert/gameover.svg" alt="img">
          <p class="black-font text-msg">Congratulations!</p>
