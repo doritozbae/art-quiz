@@ -528,6 +528,34 @@ input{
    font-weight: 200px;
 }
 
+
+/* ---ARTIST QUIZ---------------------------------------------- */
+.artists-quiz-page-container-buttons{
+   display: grid;
+   grid-template-areas: 
+   ". ."
+   ". ."; 
+   grid-template-columns: 400px 400px; 
+   grid-template-rows: 280px 280px; 
+   gap: 25px 20px; 
+   /* border: 2px solid salmon; */
+   overflow: hidden;
+}
+.artists-quiz-page-container-buttons img {
+   /* border: 2px sold firebrick; */
+   border-radius: 20px;
+   object-fit: cover;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+}
+
+.artists-quiz, .artists-categories-page, .correct-for-art, .wrong-for-art{
+   display: none; 
+}
+
+
+
 /* -------ALERT----------------------------------- */
 
 .pink-button{
@@ -942,6 +970,9 @@ text-align: center;
       letter-spacing: -0.5px;
       font-weight: 400;
    }
+   h4{
+      font-size: 15px
+   }
    .categories-page, .results-page{ 
       position: relative;
    }
@@ -949,13 +980,13 @@ text-align: center;
       padding: 30px 16px 0px 16px;
   }
   .categories-page-container-settings{
-   padding: 0px 0px 40px 0px;
+   padding: 0px 10px 40px 10px;
   }
    .categories-page-container-categories{
       display: grid; 
-      grid-template-columns: 159px 159px; 
-      grid-template-rows: 200px 200px 200px 200px 200px 200px; 
-      gap: 40px 23px; 
+      grid-template-columns: 135px 135px; 
+      grid-template-rows: 180px 180px 180px 180px 180px 180px; 
+      gap: 20px 18px; 
       grid-template-areas: 
         ". ."
         ". ."
@@ -965,12 +996,14 @@ text-align: center;
         ". ."; 
         /* border: 2px solid yellow; */
        justify-content: center;
-       padding-bottom: 50px;
+       padding-bottom: 80px;
+       padding-right: 20px;
+       padding-left: 20px;
     }
     .results-page-container-categories{
       display: grid; 
-      grid-template-columns: 159px 159px; 
-      grid-template-rows: 200px 200px 200px 200px 200px 200px; 
+      grid-template-columns: 135px 135px; 
+      grid-template-rows: 180px 180px 180px 180px 180px 180px; 
       gap: 20px 15px; 
       grid-template-areas: 
         ". ."
@@ -1014,7 +1047,7 @@ text-align: center;
       margin: 0px 0px -10px 1px;
    }
 
-   .category-item svg{
+   .category-item svg,  .art-category-item svg{
       margin-left: 13px;
    }
 
@@ -1064,6 +1097,17 @@ text-align: center;
       grid-template-rows: 48px 48px; 
       gap: 25px 20px; 
    }
+
+   .artists-quiz-page-container-buttons{
+      display: grid;
+      grid-template-areas: 
+      ". ."
+      ". ."; 
+      grid-template-columns: 320px 320px; 
+      grid-template-rows: 308px 308px; 
+      gap: 25px 25px; 
+      overflow:hidden
+   }
 }
 
 @media (min-width: 320px) and (max-width: 519px){
@@ -1103,7 +1147,7 @@ text-align: center;
       grid-template-areas: 
       ". ."
       ". ."; 
-      grid-template-columns: 158px 158px; 
+      grid-template-columns: 140px 140px; 
       grid-template-rows: 48px 48px; 
       gap: 15px 10px; 
    }
@@ -1120,6 +1164,18 @@ text-align: center;
    .quiz-page-container-question{
       margin: 40px 0px 3px 5px;
    }
+
+   .artists-quiz-page-container-buttons{
+      display: grid;
+      grid-template-areas: 
+      ". ."
+      ". ."; 
+      grid-template-columns: 155px 155px; 
+      grid-template-rows: 163px 163px; 
+      gap: 13px 18px; 
+      overflow:hidden
+   }
+
 }
 
 /* ----ALERT-------------------------- */
@@ -1151,7 +1207,7 @@ text-align: center;
       margin-bottom: 10px;
       font-size: 16px;
   }
-  .wrong-alert-btn, .correct-alert-btn{
+  .wrong-alert-btn, .correct-alert-btn, .correct-for-art, .wrong-for-art{
      width: 100%;
   }
    .quit-alert-text{
