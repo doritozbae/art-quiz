@@ -359,9 +359,11 @@ input{
      /* border: 2px solid yellow; */
     justify-content: center;
  }
-
+.help{ 
+   display: none;
+}
 .result-content{
-   border: 2px solid salmon;
+   /* border: 2px solid salmon; */
    cursor: pointer;
    transition: 0.5s;
    border-radius: 20px;
@@ -371,7 +373,7 @@ input{
 }
 .result-content img{
    width: 100%;
-   height: 100%;
+   /* height: 100%; */
    object-fit: cover;
 }
 .category-card{
@@ -393,10 +395,11 @@ input{
    /* object-fit: cover; */
    height: 100%;
    width: 100%;
+   overflow: hidden;
    /* position: relative; */
 }
 
-.category-card-content{
+.category-card{
    filter: grayscale(100%);
 }
 .category-card-content-active{
@@ -533,7 +536,11 @@ input{
    background-color: lightpink;
 }
 
-.quit-alert, .right-answer-alert, .wrong-answer-alert{
+/* .complete-alert{
+   display: block;
+} */
+
+.quit-alert, .right-answer-alert, .wrong-answer-alert, .complete-alert{
    display: none;
    z-index: 20;
    width: 580px;
@@ -552,10 +559,10 @@ input{
    margin: 122px 122px 35px 122px;
    text-align: center;
 }
-.quit-alert-buttons{
+.quit-alert-buttons, .go-alert-buttons{
    display: flex;
    flex-flow: row;
-   margin: 0px 35px 29px 35px;
+   margin: 0px 35px 35px 35px;
    justify-content: space-between;
 }
 .quit-alert button, .gameover-alert button{
@@ -581,26 +588,38 @@ input{
 }
 
 .gameover-alert{
-   z-index: 10;
+   display: none;
+}
+.gameover-alert-show{
+   display: flex;
+}
+.gameover-alert{
+   /* display: flex; */
+   z-index: 105;
    width: 580px;
    height: 608px;
    background-color: #fff;
    border-radius: 20px;
    position: absolute;
-   position: fixed;
+   /* position: fixed; */
    top: 0; left: 0; bottom: 0; right: 0;
    margin: auto;
-   display: flex;
    flex-flow: column;
 }
 .gameover-alert-img{
-   margin: 87px 178px 51px 178px;
+   margin: 60px 178px 50px 178px;
 }
-.gameover-alert h2, .gameover-alert p{
-   color: #000;
+.text-msg{
+   font-size: 42px;
    text-align: center;
+   font-weight: 500;
 }
-
+.score-msg{
+   font-size: 65px;
+   text-align: center;
+   font-weight: 500;
+   margin: 10px 0 30px 0;
+}
 .right-answer-alert, .wrong-answer-alert{
    display: none;
    opacity: 1;
@@ -635,7 +654,7 @@ text-align: center;
    top: 0; left: 0; bottom: 0; right: 0;
 }
 .correct-picture, .wrong-picture{
-   border: 2px solid lightskyblue;
+   /* border: 2px solid lightskyblue; */
    width: 100%;
    height: 400px;
    margin: 60px 0px 30px 0px;
@@ -645,6 +664,17 @@ text-align: center;
 .incorrect-answer-layout{
    display: none;
    background-color: red;
+   opacity: 0.4;
+   z-index: 10;
+   position: absolute;
+   height: 100vh;
+   width: 100%;
+   top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.black-layout{
+   display: none;
+   background-color: #000;
    opacity: 0.4;
    z-index: 10;
    position: absolute;
@@ -884,6 +914,23 @@ text-align: center;
    .categories-page-container-settings{
       padding-bottom: 60px;
    }
+
+   .results-page-container-categories{
+      /* margin: 0 auto; */
+      display: grid; 
+      grid-template-columns: 200px 200px 200px; 
+      grid-template-rows: 251px 251px 251px 251px; 
+      gap: 40px 23px; 
+      grid-template-areas: 
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . .";  
+      
+        /* border: 2px solid yellow; */
+       justify-content: center;
+       padding-bottom: 50px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 519px) {
@@ -893,7 +940,7 @@ text-align: center;
       letter-spacing: -0.5px;
       font-weight: 400;
    }
-   .categories-page{ 
+   .categories-page, .results-page{ 
       position: relative;
    }
    .categories-page-container {
@@ -918,7 +965,19 @@ text-align: center;
        justify-content: center;
        padding-bottom: 50px;
     }
-
+    .results-page-container-categories{
+      display: grid; 
+      grid-template-columns: 159px 159px; 
+      grid-template-rows: 200px 200px 200px 200px 200px 200px; 
+      gap: 20px 15px; 
+      grid-template-areas: 
+        ". ."
+        ". ."
+        ". ."
+        ". ."
+        ". ."; 
+       justify-content: center;
+    }
    .categories-footer, .categories-page-container-menu{
        display: none;
    }
@@ -982,7 +1041,7 @@ text-align: center;
 
    .quiz-page-container-picture{
       width: 100%;
-      height: 500px;
+      height: 680px;
        /* width:  34em;
       height: 21em;  */
       border: 2px solid blue;
