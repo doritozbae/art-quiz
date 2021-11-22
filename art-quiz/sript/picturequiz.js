@@ -2,7 +2,7 @@ import {picturePlace,pictureQuiz, place0, place1,place2,place3,place4,place5, pl
    correctPicture, correctPictureName, correctAuthorName, wrongPicture, wrongPictureName, wrongAuthorName, greenBg, redBg, pictureContainer, 
    pictureQuestion, pictureAnswBtn1, pictureAnswBtn2, pictureAnswBtn3, pictureAnswBtn4, correctAlert, wrongAlert, pictureButton,
    impressionism, expressionism, landscape, still, avantGarde, renaissance, surrealism,
-   kitsch, mininalism, interior, nudep} from "./values.js";
+   kitsch, mininalism, resultPAGE, scoreResult, blackBg, interior, gameoverAlert, nudep, categoriesPage} from "./values.js";
 import images from "./img.js";
 import * as categories from './categories.js';
 
@@ -12,14 +12,14 @@ let varsForCategories = {
    correctAnswers: 0,
    wrongAnswers: 0,
    indexOfWrong: [],     
-   imageIndex: 0,  
+   imageIndex: 0, 
+   questionNumber: 0, 
    lastQuestion: 9      
  };
 
 //  varsForCategories.indexOfWrong.push(3)
 //  console.log(varsForCategories.indexOfWrong)
-let questionNumber = 0;
-let userCorrectAnswers = 0;
+// let questionNumber = 0;
 
 export function showQuestion() { 
    let resultImgPlace = [place0, place1,place2, place3, place4, place5, place6, place7, place8, place9] 
@@ -27,13 +27,22 @@ export function showQuestion() {
    let buttonArray = [pictureAnswBtn1, pictureAnswBtn2, pictureAnswBtn3, pictureAnswBtn4];
   
    if (varsForCategories.imageIndex === varsForCategories.lastQuestion) {
+      scoreResult.innerHTML = `${varsForCategories.correctAnswers}/10`
+
       varsForCategories.currentQuestion = 0;
       varsForCategories.correctAnswers = 0;
       varsForCategories.wrongAnswers = 0;
+      varsForCategories.questionNumber = 0;
+   
+      
       for (let i=0; i< varsForCategories.indexOfWrong.length; i++){
          resultImgPlace[varsForCategories.indexOfWrong[i]].style.filter = "grayscale(100%)";
       }
-      pictureQuiz.classList.remove("active-page");
+      // pictureQuiz.classList.remove("active-page");
+      varsForCategories.indexOfWrong = [];
+      gameoverAlert.style.display="flex";
+      // resultPAGE.style.display="flex";
+      blackBg.style.display="flex"; 
    }
 
    pictureQuestion.innerHTML = 'Кто написал эту картину?';
@@ -78,9 +87,10 @@ export function showQuestion() {
 
    //generate results page 
    // let resultImgPlace = [place0, place1,place2, place3, place4, place5, place6, place7, place8, place9]
-   resultImgPlace[questionNumber].src = `./assets/img/img/${varsForCategories.imageIndex}.jpg`;
+   resultImgPlace[varsForCategories.questionNumber].src = `./assets/img/img/${varsForCategories.imageIndex}.jpg`;
+   resultImgPlace[varsForCategories.questionNumber].style.filter = "grayscale(0%)";
 
-   questionNumber++;
+   varsForCategories.questionNumber++;
    varsForCategories.imageIndex++;
 }
 
@@ -93,16 +103,15 @@ Array.from(pictureButton).forEach(element => {
 
          varsForCategories.currentQuestion++; 
          varsForCategories.correctAnswers++;
-         // console.log(varsForCategories.currentQuestion)
       }
       else {
          redBg.style.display="block";
          wrongAlert.style.display="block";
          varsForCategories.currentQuestion++; 
          varsForCategories.wrongAnswers++;
-         console.log(varsForCategories.currentQuestion)
+         // console.log(varsForCategories.currentQuestion)
          varsForCategories.indexOfWrong.push(varsForCategories.currentQuestion);
-         console.log(varsForCategories.indexOfWrong);
+         // console.log(varsForCategories.indexOfWrong);
          
            Array.from(pictureButton).forEach(element => {
            element.classList.remove('yes'); 
@@ -117,71 +126,81 @@ portrait.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 0;
    varsForCategories.lastQuestion = 9;
+   portrait.classList.add('category-card-content-active');
    showQuestion();
 })
 impressionism.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 10;
    varsForCategories.lastQuestion = 19;
+   impressionism.classList.add('category-card-content-active');
    showQuestion();
 })
 expressionism.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 20;
    varsForCategories.lastQuestion = 29;
+   expressionism.classList.add('category-card-content-active');
    showQuestion();
 })
 landscape.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 30;
    varsForCategories.lastQuestion = 39;
+   landscape.classList.add('category-card-content-active');
    showQuestion();
 })
 still.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 40;
    varsForCategories.lastQuestion = 49;
+   still.classList.add('category-card-content-active');
    showQuestion();
 })
 avantGarde.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 50;
    varsForCategories.lastQuestion = 59;
+   avantGarde.classList.add('category-card-content-active');
    showQuestion();
 })
 renaissance.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 60;
    varsForCategories.lastQuestion = 69;
+   renaissance.classList.add('category-card-content-active');
    showQuestion();
 })
-// surrealism.addEventListener('click', () => {
-//    categories.openPictureQuiz();
-//    varsForCategories.imageIndex = 70;
-//    varsForCategories.lastQuestion = 79;
-//    showQuestion();
-// })
+surrealism.addEventListener('click', () => {
+   categories.openPictureQuiz();
+   varsForCategories.imageIndex = 70;
+   varsForCategories.lastQuestion = 79;
+   showQuestion();
+})
 kitsch.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 80;
    varsForCategories.lastQuestion = 89;
+   kitsch.classList.add('category-card-content-active');
    showQuestion();
 })
 mininalism.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 90;
    varsForCategories.lastQuestion = 99;
+   mininalism.classList.add('category-card-content-active');
    showQuestion();
 })
 interior.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 100;
    varsForCategories.lastQuestion = 109;
+   interior.classList.add('category-card-content-active');
    showQuestion();
 })
-// nudep.addEventListener('click', () => {
-//    categories.openPictureQuiz();
-//    varsForCategories.imageIndex = 110;
-//    varsForCategories.lastQuestion = 119;
-//    showQuestion();
-// })
+nudep.addEventListener('click', () => {
+   categories.openPictureQuiz();
+   varsForCategories.imageIndex = 110;
+   varsForCategories.lastQuestion = 119;
+   showQuestion();
+})

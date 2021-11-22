@@ -1,6 +1,7 @@
 import {settingsBtn, mainPage, categoryCard, categoriesPage, picturesQuizClose, categorySettingsBtn, settingsPage, 
-       closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn, homeBtn, scoreBtn,
-       artistBtn, greenBg, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton} from "./values.js";
+       closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn,
+       gameoverAlert, gameoverHome, gameoverResults,
+       artistBtn,blackBg, greenBg, resultsHome, resultsCategories, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton, resultPAGE} from "./values.js";
 import * as settings from './settings.js';
 import * as categories from './categories.js';
 import * as pictureQuizMod from './picturequiz.js';
@@ -40,21 +41,14 @@ categorySettingsBtn.addEventListener('click', () => {
    categoriesPage.classList.remove("active-page");
    settingsPage.classList.add("active-page");
 })
-homeBtn.addEventListener('click', () => {
+menuItemCategories.addEventListener('click', () => {
    categoriesPage.classList.remove("active-page");
    mainPage.classList.add("active-page");
 })
-// categoryCard.forEach(function (categoryCards) {
-//    categoryCards.addEventListener("click", () => {
-//      categories.openPictureQuiz();
-//      pictureQuizMod.showQuestion();
-//    })
-// })
 picturesQuizClose.addEventListener('click', () => {
    // pictureQuiz.classList.remove("active-page");
    // quitAlert.style.display="block";
 })
-
 correctAlertNext.addEventListener('click', () => {
    // pictureQuiz.classList.remove("active-page");
    pictureQuizMod.showQuestion();
@@ -66,8 +60,38 @@ wrongAlertNext.addEventListener('click', () => {
    wrongAlert.style.display="none";
    redBg.style.display="none";
 })
+// menuItemCategories.addEventListener('click', () => {
+  
+// })
+menuItemHome.addEventListener('click', () => {
+   categoriesPage.classList.remove("active-page");
+   // resultsPage.classList.remove("active-page");
+   mainPage.classList.add("active-page");
+})
+// menuItemScore.addEventListener('click', () => {
+   
+// })
 
-
+//results page 
+resultsHome.addEventListener('click', () => {
+   resultPAGE.style.display="none";
+   mainPage.classList.add("active-page");
+})
+resultsCategories.addEventListener('click', () => {
+   resultPAGE.style.display="none";
+   categoriesPage.classList.add("active-page");
+})
+// menuItemHome.addEventListener('click', () => {
+//    categoriesPage.classList.remove("active-page");
+//    // resultsPage.classList.remove("active-page");
+//    mainPage.classList.add("active-page");
+// })
+gameoverResults.addEventListener('click', () => {
+   resultPAGE.style.display="block";
+   pictureQuiz.classList.remove("active-page");   
+   blackBg.style.display="none"; 
+   gameoverAlert.style.display="none";
+})
 
 categories.quitCategoriesAlert();
 

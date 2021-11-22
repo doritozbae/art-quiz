@@ -11,8 +11,8 @@ export const soundButton = document.querySelector('.sound-button');
 export const muteButton = document.querySelector('.mute-button');
 export const soundControl = document.querySelector('.progress');
 export const categorySettingsBtn = document.querySelector('.cat-page-settings');
-export const homeBtn = document.querySelector('.categories-page-container-menu-home');
-export const scoreBtn = document.querySelector('.categories-page-container-menu-score');
+// export const homeBtn = document.querySelector('.categories-page-container-menu-home');
+// export const scoreBtn = document.querySelector('.categories-page-container-menu-score');
 
 export const artistBtn = document.querySelector('.artist-quiz');
 export const picturesBtn = document.querySelector('.pictures-quiz');
@@ -30,8 +30,14 @@ export const correctAlertNext = document.querySelector('.correct-alert-btn');
 export const wrongAlert = document.querySelector('.wrong-answer-alert');
 export const wrongAlertNext = document.querySelector('.wrong-alert-btn');
 
+export const gameoverAlert = document.querySelector('.gameover-alert');
+export const gameoverHome = document.querySelector('.game-over-no');
+export const gameoverResults = document.querySelector('.game-over-yes');
+export const scoreResult = document.querySelector('.score-msg');
+
 export const greenBg = document.querySelector('.correct-answer-layout');
 export const redBg = document.querySelector('.incorrect-answer-layout');
+export const blackBg = document.querySelector('.black-layout');
 
 export const correctPicture = document.querySelector('.correct-picture-img');
 export const correctPictureName = document.querySelector('.correct-picture-name');
@@ -62,13 +68,17 @@ export const landscape = document.querySelector('.landscape');
 export const still = document.querySelector('.still');
 export const avantGarde = document.querySelector('.avant-garde');
 export const renaissance = document.querySelector('.renaissance');
-export const surrealism = document.querySelectorAll('.surrealism');
+export const surrealism = document.querySelector('.surrealism');
 export const kitsch = document.querySelector('.kitsch');
 export const mininalism = document.querySelector('.mininalism');
 export const interior = document.querySelector('.interior');
-export const nudep = document.querySelectorAll('.nude-p');
+export const nudep = document.querySelector('.nude-p');
 
-export const resultsContainer = document.querySelectorAll('.results-page-container-categories');
+export const resultsContainer = document.querySelector('.results-page-container-categories');
+export const resultPAGE= document.querySelector('.help');
+export const resultsCategories = document.querySelector('.results-categories');
+export const resultsScore = document.querySelector('.results-score');
+export const resultsHome = document.querySelector('.results-home');
 
 export const place0 = document.querySelector('.result-image0');
 export const place1 = document.querySelector('.result-image1');
