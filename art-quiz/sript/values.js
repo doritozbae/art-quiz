@@ -66,7 +66,7 @@ export const surrealism = document.querySelectorAll('.surrealism');
 export const kitsch = document.querySelector('.kitsch');
 export const mininalism = document.querySelector('.mininalism');
 export const interior = document.querySelector('.interior');
-export const nude = document.querySelectorAll('.nude');
+export const nudep = document.querySelectorAll('.nude-p');
 
 export const resultsContainer = document.querySelectorAll('.results-page-container-categories');
 

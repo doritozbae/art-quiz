@@ -44,12 +44,12 @@ homeBtn.addEventListener('click', () => {
    categoriesPage.classList.remove("active-page");
    mainPage.classList.add("active-page");
 })
-categoryCard.forEach(function (categoryCards) {
-   categoryCards.addEventListener("click", () => {
-     categories.openPictureQuiz();
-     pictureQuizMod.showQuestion();
-   })
-})
+// categoryCard.forEach(function (categoryCards) {
+//    categoryCards.addEventListener("click", () => {
+//      categories.openPictureQuiz();
+//      pictureQuizMod.showQuestion();
+//    })
+// })
 picturesQuizClose.addEventListener('click', () => {
    // pictureQuiz.classList.remove("active-page");
    // quitAlert.style.display="block";
