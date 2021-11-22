@@ -4,18 +4,15 @@ import {soundButton, saveBtn, soundControl,muteButton} from "./values.js";
 export const playlist = [
    {      
      title: 'Aqua Caelestis',
-     src: './assets/sounds/1.mp3',
-     duration: '00:39'
+     src: './assets/sounds/1.mp3'
    },  
    {
-   title: 'River Flows In You',
-   src: './assets/sounds/3.mp3',
-   duration: '01:37'
+   title: 'correct',
+   src: './assets/sounds/correct.mp3'
    },
    {
-   title: 'Summer Wind',
-   src: './assets/sounds/4.mp3',
-   duration: '01:50'
+   title: 'wrong',
+   src: './assets/sounds/wrong.mp3'
    }
  ]
 const audio = new Audio();
@@ -23,16 +20,16 @@ let isPlay = false;
 let currentAudio = 1;
 audio.src = playlist[currentAudio].src;
 
-export function playAudio() {
-   if(!isPlay) {
-       audio.play();
-       isPlay = true;
-   } 
-   else {
-       audio.pause();
-       isPlay = false;
-   }
-}
+// export function playAudio() {
+//    if(!isPlay) {
+//        audio.play();
+//        isPlay = true;
+//    } 
+//    else {
+//        audio.pause();
+//        isPlay = false;
+//    }
+// }
 // soundButton.addEventListener('click', playAudio);
 
 export function changeVolumeButtons() {
@@ -46,18 +43,21 @@ export function changeVolumeButtons() {
       soundButton.style.color = 'white';
       muteButton.style.color = '#A4A4A4';
    }
-
 }
 // soundControl.addEventListener('change', changeVolumeButtons);
 
 export function muteButtonFunc() {
    muteButton.classList.toggle('mute');
    if (muteButton.classList.contains('mute')) {
+       playlist[1].src = '';
+       playlist[2].src = '';
        audio.volume = 0;
        soundControl.value = 0;
        soundButton.style.color = '#A4A4A4';
        muteButton.style.color = 'white';
        soundControl.style.background = `linear-gradient(to right, lightpink 0%, lightpink 0%, #C4C4C4 0%, #C4C4C4)`;
+       const audio = new Audio();
+       
    }
    else {
        audio.volume = 0.4;
@@ -65,8 +65,16 @@ export function muteButtonFunc() {
        soundButton.style.color = 'white';
        muteButton.style.color = '#A4A4A4';
        soundControl.style.background = `linear-gradient(to right, lightpink 0%, lightpink 40%, #C4C4C4 40%, #C4C4C4)`;
+       playlist[1].src = './assets/sounds/correct.mp3';
+       playlist[2].src = './assets/sounds/wrong.mp3';
    }
 }
+
+soundControl.addEventListener("input", function(){
+   var x = soundControl.value;
+   var color ='linear-gradient(90deg, lightpink ' + x + '%, rgb(196, 196, 196)' + x + '%)';
+   soundControl.style.background = color;
+})
 // muteButton.addEventListener('click', muteButtonFunc);
 
 // function setLocalStorage() {
@@ -80,3 +88,4 @@ export function muteButtonFunc() {
 //    }
 //  }
 //  window.addEventListener('load', getLocalStorage)
+

@@ -16,11 +16,11 @@ export const categorySettingsBtn = document.querySelector('.cat-page-settings');
 
 export const artistBtn = document.querySelector('.artist-quiz');
 export const picturesBtn = document.querySelector('.pictures-quiz');
-export const picturesQuizClose = document.querySelector('.close-btn-pic');
+export const picturesQuizClose = document.querySelector('.quiz-close-btn');
 export const categoryCard = document.querySelectorAll('.category-card');
 export const pictureQuiz = document.querySelector('.quiz-page');
 
-export const quitAlert = document.querySelector('.quit-alert');
+export const quitAlert = document.querySelector('.qa');
 export const cancelQuitBtn = document.querySelector('.cancel-quit-btn');
 export const quitBtn = document.querySelector('.quit-btn');
 export const quitAlertCloseBtn = document.querySelector('.quit-alert-close-btn');
@@ -79,6 +79,7 @@ export const resultPAGE= document.querySelector('.help');
 export const resultsCategories = document.querySelector('.results-categories');
 export const resultsScore = document.querySelector('.results-score');
 export const resultsHome = document.querySelector('.results-home');
+export const resultsSettingsBtn = document.querySelector('.results-settings');
 
 export const place0 = document.querySelector('.result-image0');
 export const place1 = document.querySelector('.result-image1');
@@ -90,3 +91,10 @@ export const place6 = document.querySelector('.result-image6');
 export const place7 = document.querySelector('.result-image7');
 export const place8 = document.querySelector('.result-image8');
 export const place9 = document.querySelector('.result-image9');
+
+export const menuScore = document.querySelector('.score-item');
+export const menuCategory = document.querySelector('.category-item');
+export const menuHome = document.querySelector('.home-item');
+
+export const timeInput = document.querySelector('.quiz-page-timer');
+export const timer = document.querySelector('.timing-font');

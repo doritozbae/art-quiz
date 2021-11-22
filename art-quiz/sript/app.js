@@ -1,7 +1,7 @@
 import {settingsBtn, mainPage, categoryCard, categoriesPage, picturesQuizClose, categorySettingsBtn, settingsPage, 
        closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn,
        gameoverAlert, gameoverHome, gameoverResults,
-       artistBtn,blackBg, greenBg, resultsHome, resultsCategories, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton, resultPAGE} from "./values.js";
+       artistBtn,blackBg, greenBg, resultsHome, resultsCategories, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton, resultPAGE, resultsSettingsBtn} from "./values.js";
 import * as settings from './settings.js';
 import * as categories from './categories.js';
 import * as pictureQuizMod from './picturequiz.js';
@@ -60,9 +60,6 @@ wrongAlertNext.addEventListener('click', () => {
    wrongAlert.style.display="none";
    redBg.style.display="none";
 })
-// menuItemCategories.addEventListener('click', () => {
-  
-// })
 menuItemHome.addEventListener('click', () => {
    categoriesPage.classList.remove("active-page");
    // resultsPage.classList.remove("active-page");
@@ -92,8 +89,27 @@ gameoverResults.addEventListener('click', () => {
    blackBg.style.display="none"; 
    gameoverAlert.style.display="none";
 })
+gameoverHome.addEventListener('click', () => {
+   mainPage.classList.add("active-page");
+   pictureQuiz.classList.remove("active-page");   
+   blackBg.style.display="none"; 
+   gameoverAlert.style.display="none";
+})
+resultsSettingsBtn.addEventListener('click', () => {
+   settingsPage.classList.add("active-page");
+   resultPAGE.style.display="none";
+})
+picturesQuizClose.addEventListener('click', () => {
+   blackBg.style.display="block"; 
+   quitAlert.style.display="block";
+})
+
 
 categories.quitCategoriesAlert();
+
+timeSwitch.addEventListener('click', () => {
+  categories.timeSwitchFunction();
+})
 
 
 // scoreBtn.addEventListener('click', () => {
@@ -102,9 +118,8 @@ categories.quitCategoriesAlert();
 // })
 
 
-
 // picture quiz page
 // picturesQuizClose.addEventListener('click', () => {
-//    mainPage.classList.add("active-page");
-//    settingsPage.classList.remove("active-page");
+//    categoriesPage.classList.add("active-page");
+//    pictureQuiz.classList.remove("active-page");
 // })

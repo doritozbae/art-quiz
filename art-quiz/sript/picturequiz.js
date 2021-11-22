@@ -5,6 +5,7 @@ import {picturePlace,pictureQuiz, place0, place1,place2,place3,place4,place5, pl
    kitsch, mininalism, resultPAGE, scoreResult, blackBg, interior, gameoverAlert, nudep, categoriesPage} from "./values.js";
 import images from "./img.js";
 import * as categories from './categories.js';
+import * as sounds from "./settings.js";
 
 // let imageIndex = 0;
 let varsForCategories = {
@@ -103,6 +104,10 @@ Array.from(pictureButton).forEach(element => {
 
          varsForCategories.currentQuestion++; 
          varsForCategories.correctAnswers++;
+
+         const audio = new Audio();
+         audio.src = sounds.playlist[1].src;
+         audio.play();
       }
       else {
          redBg.style.display="block";
@@ -112,6 +117,10 @@ Array.from(pictureButton).forEach(element => {
          // console.log(varsForCategories.currentQuestion)
          varsForCategories.indexOfWrong.push(varsForCategories.currentQuestion);
          // console.log(varsForCategories.indexOfWrong);
+
+         const audio = new Audio();
+         audio.src = sounds.playlist[2].src;
+         audio.play();
          
            Array.from(pictureButton).forEach(element => {
            element.classList.remove('yes'); 
