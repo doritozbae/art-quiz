@@ -120,7 +120,7 @@
                  <h4>Portrait</h4>
                  <h4 class="pink-font">0/10</h4>
               </div>
-              <div class="category-card-content category-card-content-active">
+              <div class="category-card-content ">
                   <img src="./assets/img/categories/portrait.png" alt="category">
               </div>
               <div class="category-card-content-description">
@@ -291,7 +291,7 @@
                <h4 class="pink-font">0/10</h4>
             </div>
             <div class="category-card-content">
-                <img src="./assets/img/categories/Int.jpg" alt="category">
+                <img src="./assets/img/img/113.jpg" alt="category">
             </div>
             <div class="category-card-content-description">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
@@ -302,7 +302,7 @@
             </div>
          </div>
 
-         <div class="category-card nude">
+         <div class="category-card nude-p">
             <div class="category-card-description">
                <h4>Nude</h4>
                <h4 class="pink-font">0/10</h4>
@@ -357,14 +357,14 @@
    </section>
 
 
-   <section class="results-page" id="categories-page">
+   <section class="results-page help">
       <div class="categories-page-container">
          <div class="categories-page-container-settings settings-btn">
             <div class="categories-page-container-logo"></div>
             <div class="categories-page-container-menu">
-               <h3 class="categories-page-container-menu-home">Home</h3>
-               <h3 class="categories-page-container-menu-categories">Categories</h3>
-               <h3 class="categories-page-container-menu-score">Score</h3>
+               <h3 class="categories-page-container-menu-home results-home">Home</h3>
+               <h3 class="categories-page-container-menu-categories results-categories">Categories</h3>
+               <!-- <h3 class="categories-page-container-menu-score results-score">Score</h3> -->
             </div>
             <svg class="cat-page-settings" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
@@ -482,15 +482,16 @@
 
       <div class="correct-answer-layout"></div>
       <div class="incorrect-answer-layout"></div>
+      <div class="black-layout"></div>
 
-         <div class="right-answer-alert"> 
+      <div class="right-answer-alert"> 
             <div class="correct-picture">
                <img class="correct-picture-img"/>
             </div>
             <p class="correct-picture-name">rrrrr</p>
             <p class="correct-author">rrrrr</p>
             <button class="correct-alert-btn pink-button">Next</button>
-        </div> 
+      </div> 
 
         
         <div class="wrong-answer-alert"> 
@@ -504,25 +505,21 @@
 
 
       <!-- </div> -->
-      <!-- <div class="wrong-answer-alert"></div>
       <div class="congrats-alert"></div>
-      <div class="complete-alert"></div> 
+
+      <!-- <div class="complete-alert"> -->
+
+      </div> 
 
       <div class="gameover-alert">
-         <div class="close-alert">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-               <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-               <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-             </svg>
-         </div>
          <img class="gameover-alert-img" src="./assets/img/alert/gameover.svg" alt="img">
-         <h2>Game over</h2>
-         <p>Play again?</p>
-         <div class="quit-alert-buttons">
-            <button class="game-over-no"> No </button>
-            <button class="game-over-yes pink-button"> Yes</button>
+         <p class="black-font text-msg">Congratulations!</p>
+         <p class="black-font score-msg">8/10</p>
+         <div class="go-alert-buttons">
+            <button class="game-over-no"> Home </button>
+            <button class="game-over-yes pink-button"> Show results</button>
          </div>
-      </div> -->
+      </div> 
 
    </section> 
 
