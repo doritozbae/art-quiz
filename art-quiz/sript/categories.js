@@ -1,4 +1,4 @@
-import {categoryCard, portrait, menuScore, timer, timeInput, menuHome, quitAlertCloseBtn, categoriesPage, cancelQuitBtn, quitBtn, quitAlert, blackBg, pictureQuiz, menuCategory, mainPage, timeSwitch} from "./values.js";
+import {categoryCard, portrait, closeArt, menuScore, timer, timeInput, menuHome, quitAlertCloseBtn, categoriesPage, cancelQuitBtn, quitBtn, quitAlert, blackBg, pictureQuiz, menuCategory, mainPage, timeSwitch} from "./values.js";
 import * as pictureQuizMod from "./picturequiz.js";
 
 export function openPictureQuiz() {
@@ -20,6 +20,11 @@ export function quitCategoriesAlert() {
    quitAlertCloseBtn.addEventListener('click', () => {
       blackBg.style.display="none"; 
       quitAlert.style.display="none";
+   })
+
+   closeArt.addEventListener('click', () => {
+      blackBg.style.display="block"; 
+      quitAlert.style.display="block";
    })
 
    menuCategory.addEventListener('click', () => {

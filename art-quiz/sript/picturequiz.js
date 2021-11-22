@@ -184,6 +184,7 @@ surrealism.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 70;
    varsForCategories.lastQuestion = 79;
+   surrealism.classList.add('category-card-content-active');
    showQuestion();
 })
 kitsch.addEventListener('click', () => {
@@ -211,5 +212,6 @@ nudep.addEventListener('click', () => {
    categories.openPictureQuiz();
    varsForCategories.imageIndex = 110;
    varsForCategories.lastQuestion = 119;
+   nudep.classList.add('category-card-content-active');
    showQuestion();
 })

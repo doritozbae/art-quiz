@@ -98,3 +98,34 @@ export const menuHome = document.querySelector('.home-item');
 
 export const timeInput = document.querySelector('.quiz-page-timer');
 export const timer = document.querySelector('.timing-font');
+
+// ----artists----------
+export const artistsCategory = document.querySelector('.artists-categories-page');
+export const artistsCategoryHome = document.querySelector('.artists-categories-page-container-menu-home');
+export const artistsCategoryCategory = document.querySelector('.artists-categories-page-container-menu-categories');
+export const artistsCategoryScore = document.querySelector('.artists-categories-page-container-menu-score');
+
+export const artPortrait = document.querySelector('.art-portrait');
+export const artImpressionism = document.querySelector('.art-impressionism');
+export const artExpressionism = document.querySelector('.art-expressionism');
+export const artLandscape = document.querySelector('.art-landscape');
+export const artStill = document.querySelector('.art-still');
+export const artAvantGarde = document.querySelector('.art-avant-garde');
+export const artRenaissance = document.querySelector('.art-renaissance');
+export const artSurrealism = document.querySelector('.art-surrealism');
+export const artKitsch = document.querySelector('.art-kitsch');
+export const artMininalism = document.querySelector('.art-mininalism');
+export const artInterior = document.querySelector('.art-interior');
+export const artNude = document.querySelector('.art-nude');
+
+export const artistQuiz = document.querySelector('.artists-quiz');
+export const artistQuestion = document.querySelector('.artist-quiz-question');
+export const picture1 = document.querySelector('.quiz-pic-1');
+export const picture2 = document.querySelector('.quiz-pic-2');
+export const picture3 = document.querySelector('.quiz-pic-3');
+export const picture4 = document.querySelector('.quiz-pic-4');
+export const imgButton = document.querySelectorAll('.picture-quiz-image');
+
+export const wrongForArt = document.querySelector('.wrong-for-art');
+export const CorrectForArt = document.querySelector('.correct-for-art');
+export const closeArt = document.querySelector('.close-btn-art');

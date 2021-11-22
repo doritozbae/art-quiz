@@ -1,10 +1,11 @@
 import {settingsBtn, mainPage, categoryCard, categoriesPage, picturesQuizClose, categorySettingsBtn, settingsPage, 
        closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn,
-       gameoverAlert, gameoverHome, gameoverResults,
+       gameoverAlert, gameoverHome, gameoverResults, wrongForArt, CorrectForArt,
        artistBtn,blackBg, greenBg, resultsHome, resultsCategories, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton, resultPAGE, resultsSettingsBtn} from "./values.js";
 import * as settings from './settings.js';
 import * as categories from './categories.js';
 import * as pictureQuizMod from './picturequiz.js';
+import * as artistQuizMod from './artistquiz.js';
 
 // main page
 settingsBtn.addEventListener('click', () => {
@@ -18,6 +19,10 @@ closeSettingsBtn.addEventListener('click', () => {
 picturesBtn.addEventListener('click', () => {
    mainPage.classList.remove("active-page");
    categoriesPage.classList.add("active-page");
+   wrongAlertNext.style.display="block";
+   correctAlertNext.style.display="block";
+   CorrectForArt.style.display="none";
+   wrongForArt.style.display="none";
    menuItemCategories.classList.toggle("pink-font");
 })
 menuItemHome.addEventListener('click', () => {
