@@ -109,7 +109,12 @@ Array.from(imgButton).forEach(element => {
    }); 
 });
 
-
+export function closeArtSection() {
+   artistsCategory.style.display="none"; 
+}
+export function openArtSection() {
+   artistsCategory.style.display="block"; 
+}
 
 export function openArtQuiz() {
    artistsCategory.style.display="none";  
@@ -122,7 +127,7 @@ export function openArtQuiz() {
 
 artistBtn.addEventListener('click', () => {
       mainPage.classList.remove("active-page");
-      artistsCategory.style.display="block";  
+      // openArtSection();
       artistsCategoryCategory.style.color = "lightpink";
 })
 artistsCategoryHome.addEventListener('click', () => {
