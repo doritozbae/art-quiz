@@ -23,6 +23,7 @@ export const pictureQuiz = document.querySelector('.quiz-page');
 export const quitAlert = document.querySelector('.qa');
 export const cancelQuitBtn = document.querySelector('.cancel-quit-btn');
 export const quitBtn = document.querySelector('.quit-btn');
+export const artistQuitBtn = document.querySelector('.art-quit-btn');
 export const quitAlertCloseBtn = document.querySelector('.quit-alert-close-btn');
 
 export const correctAlert = document.querySelector('.right-answer-alert');

@@ -7,8 +7,6 @@ import * as categories from './sript/categories.js';
 import * as pictureQuizMod from './sript/picturequiz.js';
 import * as artistQuizMod from './sript/artistquiz.js';
 
-console.log('lk');
-
 // main page
 settingsBtn.addEventListener('click', () => {
    mainPage.classList.remove("active-page");
