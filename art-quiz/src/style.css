@@ -65,6 +65,18 @@ section {
    color: #000;
    /* font-weight: 500; */
 }
+
+@keyframes show {
+   0% {
+     opacity: 0;
+     transform: scale(0);
+   }
+   100% {
+     opacity: 1;
+     transform: scale(1);
+   }
+ }
+
 /* -----MAIN-PAGE---------------------------- */
 
 .settings-page, .main-page, .categories-page, .quiz-page {
@@ -117,7 +129,7 @@ section {
    padding-right: 40px;
    /* margin-top: 165px; */
    /* background: black; */
-   height: 79px;
+   /* height: 79px; */
    position: absolute;
    bottom: 0;
    width: 100%;
@@ -439,6 +451,7 @@ input{
 .quiz-page{
    position: relative;
    /* display: none; */
+   position: fixed;
 }
 
 .quiz-page-container{
@@ -527,10 +540,14 @@ input{
    font-size: 24px;
    font-weight: 200px;
 }
+.quiz-page-container-question {
+  margin-top: 50px;
+}
 
 
 /* ---ARTIST QUIZ---------------------------------------------- */
 .artists-quiz-page-container-buttons{
+  margin: 0 auto;
    display: grid;
    grid-template-areas: 
    ". ."
@@ -552,6 +569,9 @@ input{
 
 .artists-quiz, .artists-categories-page, .correct-for-art, .wrong-for-art{
    display: none; 
+}
+.quiz-pages{
+  position: fixed;
 }
 
 
@@ -582,6 +602,9 @@ input{
    /* display: flex; */
    flex-flow: column;
    /* opacity: 0;   */
+}
+.wrong-answer-alert button{ 
+  margin: 0 auto;
 }
 .quit-alert-text{
    margin: 122px 122px 35px 122px;
@@ -1099,6 +1122,7 @@ text-align: center;
    }
 
    .artists-quiz-page-container-buttons{
+     margin: 0 auto;
       display: grid;
       grid-template-areas: 
       ". ."
@@ -1108,6 +1132,12 @@ text-align: center;
       gap: 25px 25px; 
       overflow:hidden
    }
+   .quiz-page-container-question {
+    margin-top: 10px;
+  }
+  .artist-quiz-question{
+     margin-left: 130px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 519px){
@@ -1175,6 +1205,9 @@ text-align: center;
       gap: 13px 18px; 
       overflow:hidden
    }
+   .quiz-page-container-question {
+    margin-top: 10px;
+  }
 
 }
 

@@ -1,7 +1,7 @@
 import {artistsCategory, artistsCategoryHome, artistsCategoryCategory, artistsCategoryScore,
    artPortrait, artImpressionism, artExpressionism, artLandscape, artStill, blackBg, redBg, greenBg,
    artAvantGarde, artRenaissance, artSurrealism, artKitsch, artMininalism, scoreResult,
-   artInterior, gameoverAlert, wrongForArt, CorrectForArt,correctAlert, wrongAlertNext, correctAlertNext, wrongAlert, artistBtn,correctPicture, correctPictureName, correctAuthorName, wrongPicture, wrongPictureName, wrongAuthorName, artNude, artistQuiz, artistQuestion, picture1, picture2, picture3, picture4, place0, place1,place2,place3,place4,place5, place6, place7, place8, place9, mainPage, imgButton} from "./values.js";
+   artInterior, gameoverAlert, wrongForArt, CorrectForArt,correctAlert, wrongAlertNext, correctAlertNext, wrongAlert, artistBtn,correctPicture, correctPictureName, correctAuthorName, wrongPicture, wrongPictureName, wrongAuthorName, artNude, artistsQuiz, artistQuestion, picture1, picture2, picture3, picture4, place0, place1,place2,place3,place4,place5, place6, place7, place8, place9, mainPage, imgButton} from "./values.js";
 import images from "./img.js";
 import * as sounds from "./settings.js";
 
@@ -36,7 +36,7 @@ export function showArtQuestion() {
       blackBg.style.display="flex"; 
    }
 
-   artistQuestion.innerHTML = `Какую картинку написал ${images[varsForArt.imageIndex].author}`;
+   artistQuestion.innerHTML = `Какую картину написал ${images[varsForArt.imageIndex].author}`;
 
     // generate answers, getting random num for correct answer btn
     function getRandomBtn(min, max){
@@ -113,7 +113,7 @@ Array.from(imgButton).forEach(element => {
 
 export function openArtQuiz() {
    artistsCategory.style.display="none";  
-   artistQuiz.style.display="block"; 
+   artistsQuiz.style.display="block"; 
    wrongAlertNext.style.display="none";
    correctAlertNext.style.display="none";
    CorrectForArt.style.display="block";
@@ -123,6 +123,7 @@ export function openArtQuiz() {
 artistBtn.addEventListener('click', () => {
       mainPage.classList.remove("active-page");
       artistsCategory.style.display="block";  
+      artistsCategoryCategory.style.color = "lightpink";
 })
 artistsCategoryHome.addEventListener('click', () => {
       artistsCategory.style.display="none";  

@@ -104,6 +104,7 @@ export const artistsCategory = document.querySelector('.artists-categories-page'
 export const artistsCategoryHome = document.querySelector('.artists-categories-page-container-menu-home');
 export const artistsCategoryCategory = document.querySelector('.artists-categories-page-container-menu-categories');
 export const artistsCategoryScore = document.querySelector('.artists-categories-page-container-menu-score');
+export const artistsCategorySettings = document.querySelector('.artists-cat-page-settings');
 
 export const artPortrait = document.querySelector('.art-portrait');
 export const artImpressionism = document.querySelector('.art-impressionism');
@@ -118,7 +119,7 @@ export const artMininalism = document.querySelector('.art-mininalism');
 export const artInterior = document.querySelector('.art-interior');
 export const artNude = document.querySelector('.art-nude');
 
-export const artistQuiz = document.querySelector('.artists-quiz');
+export const artistsQuiz = document.querySelector('.artists-quiz');
 export const artistQuestion = document.querySelector('.artist-quiz-question');
 export const picture1 = document.querySelector('.quiz-pic-1');
 export const picture2 = document.querySelector('.quiz-pic-2');

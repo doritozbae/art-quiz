@@ -1,7 +1,7 @@
 import {settingsBtn, mainPage, categoryCard, categoriesPage, picturesQuizClose, categorySettingsBtn, settingsPage, 
        closeSettingsBtn, soundButton,menuItemCategories, soundControl,muteButton,picturesBtn,
        gameoverAlert, gameoverHome, gameoverResults, wrongForArt, CorrectForArt,
-       artistBtn,blackBg, greenBg, resultsHome, resultsCategories, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton, resultPAGE, resultsSettingsBtn} from "./sript/values.js";
+       artistBtn,blackBg, artistsCategory, greenBg, artistsCategorySettings, resultsHome, resultsCategories, redBg, wrongAlert, wrongAlertNext, correctAlert, correctAlertNext, menuItemHome, timeSwitch, pictureQuiz, quitAlert, pictureAnswBtn2, pictureButton, resultPAGE, resultsSettingsBtn, artistsQuiz} from "./sript/values.js";
 import * as settings from './sript/settings.js';
 import * as categories from './sript/categories.js';
 import * as pictureQuizMod from './sript/picturequiz.js';
@@ -83,22 +83,19 @@ resultsCategories.addEventListener('click', () => {
    resultPAGE.style.display="none";
    categoriesPage.classList.add("active-page");
 })
-// menuItemHome.addEventListener('click', () => {
-//    categoriesPage.classList.remove("active-page");
-//    // resultsPage.classList.remove("active-page");
-//    mainPage.classList.add("active-page");
-// })
 gameoverResults.addEventListener('click', () => {
    resultPAGE.style.display="block";
    pictureQuiz.classList.remove("active-page");   
    blackBg.style.display="none"; 
    gameoverAlert.style.display="none";
+   artistsQuiz.style.display="none";
 })
 gameoverHome.addEventListener('click', () => {
    mainPage.classList.add("active-page");
    pictureQuiz.classList.remove("active-page");   
    blackBg.style.display="none"; 
    gameoverAlert.style.display="none";
+   artistsQuiz.style.display="none";
 })
 resultsSettingsBtn.addEventListener('click', () => {
    settingsPage.classList.add("active-page");
@@ -108,7 +105,10 @@ picturesQuizClose.addEventListener('click', () => {
    blackBg.style.display="block"; 
    quitAlert.style.display="block";
 })
-
+artistsCategorySettings.addEventListener('click', () => {
+   settingsPage.classList.add("active-page");
+   artistsCategory.style.display="none";
+})
 
 categories.quitCategoriesAlert();
 
