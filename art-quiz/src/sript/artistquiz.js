@@ -127,7 +127,7 @@ export function openArtQuiz() {
 
 artistBtn.addEventListener('click', () => {
       mainPage.classList.remove("active-page");
-      // openArtSection();
+      openArtSection(); 
       artistsCategoryCategory.style.color = "lightpink";
 })
 artistsCategoryHome.addEventListener('click', () => {
